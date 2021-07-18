@@ -34,7 +34,7 @@ async function connectToDatabase(){
 //CREATE OUR ROUTES
 
 app.get('/',(req,res)=>{
-    res.send('Yoo Hoo!!! Server is Ready')
+    res.send('Yoo Hoo!!! API Ready To Serve')
 })
 
 
@@ -70,7 +70,6 @@ app.put("/tweets/:tweetId", async(req,res)=>{
     const text = req.body.tweet;
 
     const db = await connectToDatabase();
-    console.log(tweetId,'logged value');
 
     const tweet = await db
     .collection("tweets")
